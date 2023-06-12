@@ -12,7 +12,7 @@ meta {## § Optional component "meta". For authoring and description. Can be wri
    "A instructive wdl file for developers, filled with MANY commentaries, for easily find concepts (§) and tips (!).
    Here is described: 
    Simple workflow with a condidional
-   Workflow with multiple parameters nad Plumbing"
+   Workflow with multiple parameters and Plumbing"
  }
 
 
