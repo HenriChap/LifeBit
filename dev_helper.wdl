@@ -41,7 +41,7 @@ workflow BasicWorkflow { ## § Top-level component "workflow". USed for  ! Keep 
     File my_ref
     File my_input
     Boolean is_name
-    String? name = "file" ## ! The "?" set the variable as optional, and "=" set a default value in case it is not provided when running the wdl
+    String? name = basename(my_input, ".bam") ( ## ! The "?" set the variable as optional, and "=" set a default value. § basename(), a function with two arguments: where to extract a string, and what to strip off. In this case, the name will be whatever my_input file is named without ".bam" 
 }
   if(is_name) { ## § WDL only have conditional "if", and take boolean values to execute the following instruction.
      call task_A as FirstTimeTask {## § Top-level component "call". Call tasks inputs corresponding to workflow's. Input names have to be the same from task_A description, as shown further. § You can use "as" to alias a task.
@@ -56,7 +56,7 @@ workflow BasicWorkflow { ## § Top-level component "workflow". USed for  ! Keep 
           input: 
           ref = my_ref,
           in = my_input,
-          id = "nameless" ## ! 
+          id = "file" ## ! 
      }
   }
 }
