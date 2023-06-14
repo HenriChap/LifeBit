@@ -2,14 +2,14 @@ version 1.0
 
 ## ! Before starting, remember to setup your enviroment with an engine (each with its requeriments) and Docker. Suggest to start with cromwell or miniwdl. 
 
-import <path/file> as task_Z ## ! A good pratice to reuse code and improve maintenance. Remember to keep your WDL short.
+import <path/file> as task_Z ## § import syntax makes possible to recycle components from other workflows ! A good pratice to reuse code and improve maintenance. Remember to keep your WDL short.
 
 
 meta {## § Optional component "meta". For authoring and description. Can be written at multiple parts of the wdl.
    author: "Herique Chapola"
    email: "henriquechapola@gmail.com"
    description:
-   "A instructive wdl file for developers, filled with MANY commentaries, for easily find concepts (§) and tips (!).
+   "An instructive wdl file for developers, filled with MANY commentaries, for easily finding concepts (§) and tips (!).
    Here is described: 
    Simple workflow with a condidional
    Workflow with multiple parameters and Plumbing"
